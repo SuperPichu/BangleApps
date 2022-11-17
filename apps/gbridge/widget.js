@@ -201,7 +201,9 @@
         };
         require("notify").show(currentNot);
         if (!(require("Storage").readJSON("setting.json", 1) || {}).quiet) {
-          Bangle.buzz(2000, 1);
+          Bangle.buzz(500, 1);
+          Bangle.buzz(500, 1);
+          Bangle.buzz(500, 1);
         }
         break;
       case "notify-":
